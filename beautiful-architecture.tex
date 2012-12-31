@@ -1,0 +1,49 @@
+\documentclass[a4paper]{article}
+\usepackage{geometry}
+\geometry{left=2cm,right=2cm,top=2.5cm,bottom=2.5cm}
+\author{Chunwei Yan}
+
+\title{Beautiful Architecture}
+\usepackage{xeCJK}
+\usepackage{graphicx}
+\setCJKmainfont{SimSun}
+%\setCJKmainfont{WenQuanYi Micro Hei Mono}
+\begin{document}
+    \maketitle
+\section{A Tale of Two Systems: A Modern-Day Software Fable}
+
+A software system is like a city -- an intricate network of highways and hostelries, of back roads and buildings.
+There's a lot going on in a busy city; flows of control are continually being born, weaving their life through it, and dying.
+\par 
+if you can learn from these projects' mistakes and success, ou might save yourself (and your software) a lot of pain.
+
+\subsection{Cohesion and Coupline}
+Key qualities of software design are cohesion and coupling.
+\paragraph{Strong Cohesion}
+\par cohesion is a measure of how related functionality is gathered together and how well the parts inside a module work as a whole. cohesion is the glue holding a module together.
+\par Weakly cohesive modules are a sign of bad decomposition. Each module must have a clearly defined role, and not be a grab bag of unrelated functionality.
+\par 一致性使得一个模块的各个部分能够像一个整体去运行，在这个模块中，每个部分需要有一个特定的明显的角色。
+\paragraph{Low Coupling}
+Coupling is a measure of the interdependency between modules -- the amount of wiring to and from them.
+\par Good sftware design limits the lines of communication to only those that are absolutely necessary. These communication lines are part of what determines the architecture.
+\par 为了满足修改和扩充的要求，低耦合能够使系统有更大的灵活性。尽量降低关系的复杂性。
+\\
+\subsection{Unnecessary coupling}
+\par The individual parts of the system were so tightly coupled that you couldn't bring up a skeletal system without creating every single component. 
+Any change in a single component rippled out, requiring changes in many dependent components. 
+The code components did not make sence in isolation.
+\par This made low-level testing impossible, Not only were code-level unit tests impossible to write, but component-level integration tests could not be constructed, as every component depended on almost every other component. 
+
+\textbf{
+    Good design takes into account connection mechanisms and the number (and nature) of inter-component connections. 
+    The individual parts of a system should be able to stand alone.
+    Tight coupling leads to untestable code.
+}
+
+
+
+
+
+
+\end{document}
+
